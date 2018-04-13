@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="default" extends="json-default">
+		<action name="login" class="org.action.UserAction" method="login">
+			<result name="success">/jsp/main.jsp</result>
+			<result name="error">/jsp/login.jsp</result>
+			<result name="input">/jsp/login.jsp</result>
+		</action>
+		
+		<action name="searchByOption" class="org.action.BookAction" method="searchByOption">
+			<result name="success" type="json" />
+		</action>
+		<action name="searchByBc" class="org.action.BookAction" method="searchByBc">
+			<result name="success">/jsp/addBookSuccess.jsp</result>
+		</action>
+		<action name="searchAll" class="org.action.BookAction" method="searchAll">
+			<result name="success" type="json" />
+		</action>
+		<action name="addBook" class="org.action.BookAction" method="addBook">
+			<result name="success">/jsp/addBookSuccess.jsp</result>
+		</action>
+		<action name="addBooks" class="org.action.BookAction" method="addBooks">
+			<result name="success">/jsp/addBookSuccess.jsp</result>
+		</action>
+		<action name="deleteBook" class="org.action.BookAction" method="deleteBook">
+			<result name="success">/jsp/addBookSuccess.jsp</result>
+		</action>
+		<action name="alterBook" class="org.action.BookAction" method="alterBook">
+			<result name="success">/jsp/addBookSuccess.jsp</result>
+		</action>
+		
+		<action name="getAllRoomNo" class="org.action.ReadingRoomAction" method="getAllRoomNo">
+			<result name="success" type="json" />
+		</action>
+		
+		<action name="exportDatas" class="org.action.BookAction" method="exportBooks">
+			<result name="success" type="json" />
+		</action>
+		
+		<action name="changePaw" class="org.action.UserAction" method="changePaw">
+			<result name="success">/jsp/main.jsp</result>
+		</action>
+		
+		<!-- 生成验证码 -->
+		<action name="random" class="org.action.random" method="findRandom">
+			<result name="success" type="json" />
+		</action>
+	</package>
+</struts>
