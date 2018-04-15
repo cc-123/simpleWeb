@@ -10,4 +10,7 @@ bootstrap +  jQuery
 
 Struts2  +  Hibernate  +  MySql
 
+### 二.小结
+  运用自己所学的知识, 制作了一个小的web, 对相关技术有了更好的了解.
+
 
